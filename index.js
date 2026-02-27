@@ -99,3 +99,15 @@ bot.on('message', async (msg) => {
     bot.sendMessage(chatId, 'Ejemplo:\n\ng 2500 nafta');
   }
 });
+
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Bot funcionando 🚀');
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor escuchando en puerto ${PORT}`);
+});
